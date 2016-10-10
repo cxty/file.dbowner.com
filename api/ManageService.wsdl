@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://file.dbowner.com/ManageService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ManageService" targetNamespace="http://file.dbowner.com/ManageService/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://file.dbowner.com/ManageService/">
+      <xsd:element name="ServerList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ServerListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Auth">
+      	<xsd:complexType>
+      		<xsd:sequence>
+      			<xsd:element name="user" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServer">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServerResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServerListForPage">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServerListForPageResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertServer">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertServerResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateServer">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateServerResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteServer">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteServerResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FileList">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FileListResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFileListForPage">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFileListForPageResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertFile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertFileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateFile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateFileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteFile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteFileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CheckFileServer">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="data" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CheckFileServerResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="return" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ServerListRequest">
+    <wsdl:part element="tns:ServerList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ServerListResponse">
+    <wsdl:part element="tns:ServerListResponse" name="parameters"/>
+  </wsdl:message>
+   <wsdl:message name="SOAPAuth">
+  	<wsdl:part name="Auth" element="tns:Auth"/>
+  </wsdl:message>
+   <wsdl:message name="GetServerRequest">
+   	<wsdl:part name="parameters" element="tns:GetServer"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetServerResponse">
+   	<wsdl:part name="parameters" element="tns:GetServerResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetServerListForPageRequest">
+   	<wsdl:part name="parameters" element="tns:GetServerListForPage"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetServerListForPageResponse">
+   	<wsdl:part name="parameters" element="tns:GetServerListForPageResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="InsertServerRequest">
+   	<wsdl:part name="parameters" element="tns:InsertServer"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="InsertServerResponse">
+   	<wsdl:part name="parameters" element="tns:InsertServerResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="UpdateServerRequest">
+   	<wsdl:part name="parameters" element="tns:UpdateServer"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="UpdateServerResponse">
+   	<wsdl:part name="parameters" element="tns:UpdateServerResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="DeleteServerRequest">
+   	<wsdl:part name="parameters" element="tns:DeleteServer"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="DeleteServerResponse">
+   	<wsdl:part name="parameters" element="tns:DeleteServerResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetFileRequest">
+   	<wsdl:part name="parameters" element="tns:GetFile"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetFileResponse">
+   	<wsdl:part name="parameters" element="tns:GetFileResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="FileListRequest">
+   	<wsdl:part name="parameters" element="tns:FileList"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="FileListResponse">
+   	<wsdl:part name="parameters" element="tns:FileListResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetFileListForPageRequest">
+   	<wsdl:part name="parameters" element="tns:GetFileListForPage"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="GetFileListForPageResponse">
+   	<wsdl:part name="parameters" element="tns:GetFileListForPageResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="InsertFileRequest">
+   	<wsdl:part name="parameters" element="tns:InsertFile"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="InsertFileResponse">
+   	<wsdl:part name="parameters" element="tns:InsertFileResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="UpdateFileRequest">
+   	<wsdl:part name="parameters" element="tns:UpdateFile"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="UpdateFileResponse">
+   	<wsdl:part name="parameters" element="tns:UpdateFileResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="DeleteFileRequest">
+   	<wsdl:part name="parameters" element="tns:DeleteFile"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="DeleteFileResponse">
+   	<wsdl:part name="parameters" element="tns:DeleteFileResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="CheckFileServerRequest">
+   	<wsdl:part name="parameters" element="tns:CheckFileServer"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="CheckFileServerResponse">
+   	<wsdl:part name="parameters" element="tns:CheckFileServerResponse"></wsdl:part>
+   </wsdl:message>
+   <wsdl:portType name="ManageService">
+    <wsdl:operation name="ServerList">
+      <wsdl:input message="tns:ServerListRequest"/>
+      <wsdl:output message="tns:ServerListResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetServer">
+    	<wsdl:input message="tns:GetServerRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetServerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerListForPage">
+    	<wsdl:input message="tns:GetServerListForPageRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetServerListForPageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServer">
+    	<wsdl:input message="tns:InsertServerRequest"></wsdl:input>
+    	<wsdl:output message="tns:InsertServerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServer">
+    	<wsdl:input message="tns:UpdateServerRequest"></wsdl:input>
+    	<wsdl:output message="tns:UpdateServerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServer">
+    	<wsdl:input message="tns:DeleteServerRequest"></wsdl:input>
+    	<wsdl:output message="tns:DeleteServerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+    	<wsdl:input message="tns:GetFileRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileList">
+    	<wsdl:input message="tns:FileListRequest"></wsdl:input>
+    	<wsdl:output message="tns:FileListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileListForPage">
+    	<wsdl:input message="tns:GetFileListForPageRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetFileListForPageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFile">
+    	<wsdl:input message="tns:InsertFileRequest"></wsdl:input>
+    	<wsdl:output message="tns:InsertFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFile">
+    	<wsdl:input message="tns:UpdateFileRequest"></wsdl:input>
+    	<wsdl:output message="tns:UpdateFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+    	<wsdl:input message="tns:DeleteFileRequest"></wsdl:input>
+    	<wsdl:output message="tns:DeleteFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileServer">
+    	<wsdl:input message="tns:CheckFileServerRequest"></wsdl:input>
+    	<wsdl:output message="tns:CheckFileServerResponse"></wsdl:output>
+    </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="ManageServiceSOAP" type="tns:ManageService">
+   	<soap:binding style="document"
+   		transport="http://schemas.xmlsoap.org/soap/http" />
+   	<wsdl:operation name="ServerList">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/ServerList" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="GetServer">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/GetServer" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="GetServerListForPage">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/GetServerListForPage" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="InsertServer">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/InsertServer" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="UpdateServer">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/UpdateServer" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="DeleteServer">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/DeleteServer" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="GetFile">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/GetFile" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="FileList">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/FileList" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="GetFileListForPage">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/GetFileListForPage" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="InsertFile">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/InsertFile" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="UpdateFile">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/UpdateFile" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="DeleteFile">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/DeleteFile" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   	<wsdl:operation name="CheckFileServer">
+   		<soap:operation
+   			soapAction="http://file.dbowner.com/ManageService/CheckFileServer" />
+   		<wsdl:input>
+   			<soap:body use="literal" />
+   			<soap:header message="tns:SOAPAuth" part="Auth"
+   				use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<soap:body use="literal" />
+   		</wsdl:output>
+   	</wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="ManageService">
+    <wsdl:port binding="tns:ManageServiceSOAP" name="ManageServiceSOAP">
+      <soap:address location="http://file.dbowner.com/soap.php"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
